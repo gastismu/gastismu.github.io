@@ -1,0 +1,78 @@
+/* Card styles for team section */
+
+/* Card Header Style */
+.card-header {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Card Inner Style */
+.card-inner {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    .specialties-description {
+        text-align: justify !important;
+    }
+}
+
+/* Card Header Images */
+.card-header img  {
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+    padding: 10px;
+}
+
+/* Apply same styles to icon major */
+.box.highlight i.icon.major {
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+    padding: 10px;
+}
+
+/* For the actual icon inside the container */
+.box.highlight i.icon.major:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Hover effect for team member images */
+.team-member .card-header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for highlight icons */
+.box.highlight i.icon.major:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+ @media screen and (max-width: 850px) {
+    .card-header img,
+    .box.highlight i.icon.major {
+        width: 40%;
+    }
+}

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.estudiosmulevici.com.ar/sitemap.xml
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /config/
+
+# Allow all other directories
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/ 
