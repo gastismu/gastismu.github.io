@@ -73,6 +73,58 @@
  @media screen and (max-width: 850px) {
     .card-header img,
     .box.highlight i.icon.major {
-        width: 40%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {    
+    .card-inner {
+        padding: 0 20px;
+    }
+    
+    .card-inner h3 {
+        font-size: 1.4em;
+        line-height: 1.4;
+        margin-bottom: 0.8em;
+    }
+    
+    .card-inner p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+    }
+    
+    .specialties-description {
+        font-size: 1.15em;
+        line-height: 1.6;
+        margin-bottom: 1.5em;
+    }
+    
+    /* Improve touch targets */
+    .card-inner a {
+        padding: 0.6em;
+        display: inline-block;
+    }
+    
+    /* Increased contrast for better readability */
+    .card-inner p, .specialties-description {
+        color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* iPhone specific adjustments */
+@media screen and (max-width: 375px) {
+    .card-header img,
+    .box.highlight i.icon.major {
+        width: 95%;
+    }
+    
+    .card-inner h3 {
+        font-size: 1.5em;
+    }
+    
+    .card-inner p,
+    .specialties-description {
+        font-size: 1.2em;
     }
 }
