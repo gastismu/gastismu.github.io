@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="es-AR">
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNSKX448HJ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-JNSKX448HJ');
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Estudio Jurídico Smulevici | Abogados en Buenos Aires</title>
@@ -300,8 +308,21 @@
 	})();
 </script>
 
-<!-- Google Analytics: the old Universal Analytics ID (UA-168811917-1) stopped collecting in 2023,
-     so its script was removed. To enable GA4, paste the gtag snippet with your G-XXXXXXX ID here. -->
+<script>
+	// Google Analytics events for contact actions (mark them as key events in GA4 to count leads)
+	document.addEventListener('click', function (e) {
+		var a = e.target.closest('a[href]');
+		if (!a || typeof gtag !== 'function') return;
+		var href = a.getAttribute('href');
+		var name = /wa\.me/.test(href) ? 'whatsapp_click' : /^mailto:/.test(href) ? 'email_click' : /^tel:/.test(href) ? 'phone_click' : null;
+		if (name) gtag('event', name, { link_text: a.textContent.trim(), link_url: href });
+	});
+	document.querySelectorAll('form').forEach(function (form) {
+		form.addEventListener('submit', function () {
+			if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_id: 'contacto' });
+		});
+	});
+</script>
 
 <!-- Structured Data -->
 <script type="application/ld+json">
