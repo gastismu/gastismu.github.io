@@ -31,7 +31,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600&display=swap">
 	<link rel="stylesheet" href="assets/css/site.css">
-	<link rel="preload" as="image" href="images/optimized/tribunales.webp" type="image/webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/optimized/tribunales-wide.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
+	<link rel="preload" as="image" href="images/optimized/tribunales-wide-m.webp" type="image/webp" media="(max-width: 700px)" fetchpriority="high">
 </head>
 <body>
 
@@ -51,20 +52,18 @@
 <main>
 
 <!-- Hero -->
-<section id="inicio" class="sec g12 hero">
-	<div class="span-7 stack gap-32">
+<section id="inicio" class="sec hero hero-full">
+	<picture class="hero-bg">
+		<source media="(max-width: 700px)" srcset="images/optimized/tribunales-wide-m.webp" width="800" height="985">
+		<img src="images/optimized/tribunales-wide.webp" alt="Palacio de Justicia de la Nación, Buenos Aires" width="1600" height="900" fetchpriority="high">
+	</picture>
+	<div class="hero-content stack gap-32">
 		<div class="eyebrow">Desde 1950 · Buenos Aires</div>
 		<h1 class="h1">Estudio Jurídico Smulevici</h1>
-		<p class="lead"><em class="serif" style="font-size: 1.15em; color: var(--ink)">3ra generación de abogados.</em> Más de 70 años de experiencia en derecho civil, comercial y laboral, con asesoramiento legal personalizado.</p>
+		<p class="lead"><em class="serif">3ra generación de abogados.</em> Más de 70 años de experiencia en derecho civil, comercial y laboral, con asesoramiento legal personalizado.</p>
 		<div class="btns" style="padding-top: 8px">
-			<a href="#contacto" class="btn btn-primary">Consultanos</a>
-			<a href="#especialidades" class="btn btn-outline">Especialidades</a>
-		</div>
-	</div>
-	<div class="span-5">
-		<div class="hero-media">
-			<img src="images/optimized/tribunales.webp" alt="Palacio de Justicia de la Nación, Buenos Aires" width="880" height="1100" fetchpriority="high">
-			<div class="hero-badge"><strong>+70 años</strong>tres generaciones</div>
+			<a href="#contacto" class="btn btn-light">Consultanos</a>
+			<a href="#especialidades" class="btn btn-outline-light">Especialidades</a>
 		</div>
 	</div>
 </section>
